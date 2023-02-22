@@ -22,6 +22,10 @@ class DeveloperPreview {
     
     let homeVM = HomeViewModel()
     
+    let stat1 = StatisticModel(title: "Market Cap", value: "21.37", percentageChange: 14)
+    let stat2 = StatisticModel(title: "Total Volume", value: "$555")
+    let stat3 = StatisticModel(title: "Portfolio Value", value: "$123", percentageChange: -12.34)
+    
   /*  let homeVM = HomeViewModel()
     
     let stat1 = StatisticModel(title: "Market Cap", value: "$12.5Bn", percentageChange: 25.34)
