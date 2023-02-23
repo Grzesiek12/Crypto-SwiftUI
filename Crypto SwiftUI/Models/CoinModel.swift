@@ -7,7 +7,7 @@
 
 import Foundation
 
-//Coin Gecko APi Info
+//Coin Gecko APi Info:
 /*Coin gecko API
  
  URL:
