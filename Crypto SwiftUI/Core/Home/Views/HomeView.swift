@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
-    @State private var showPortfolio: Bool = false
+    @State private var showPortfolio: Bool = false // animate right
+    @State private var showPortfolioView: Bool = false // new sheet
     
     var body: some View {
         ZStack {
@@ -18,6 +19,10 @@ struct HomeView: View {
             //bacnground layer
             Color.theme.background
                 .ignoresSafeArea()
+                .sheet(isPresented: $showPortfolioView, content: {
+                    PortfolioView()
+                        .environmentObject(vm)
+                })
             
             //content layer
             VStack {
@@ -25,7 +30,7 @@ struct HomeView: View {
                 HomeStatsView(showPortfolio: $showPortfolio)
                 SearchBarView(searchText: $vm.searchText)
                 
-                columnTitlse
+                columnTitle
                 
                 if !showPortfolio {
                     allCoinsList
@@ -61,6 +66,12 @@ extension HomeView {
     private var homeHeader: some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info")
+            //przejście do okna showPortfolioView
+                .onTapGesture {
+                    if showPortfolio {
+                        showPortfolioView.toggle()
+                    }
+                }
                 .background(
                 CircleButtonAnimationView(animate: $showPortfolio)
                 )
@@ -94,7 +105,7 @@ extension HomeView {
     
     private var portfolioCoinsList: some View {
         List {
-            ForEach(vm.allCoins) { coin in
+            ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 10)))
                 
@@ -103,7 +114,7 @@ extension HomeView {
         .listStyle(PlainListStyle())
     }
     
-    private var columnTitlse: some View {
+    private var columnTitle: some View {
         HStack {
             Text("Coin")
             Spacer()
