@@ -5,8 +5,6 @@
 //  Created by Grzegorz Wiczkowski on 21/02/2023.
 //
 
-//12:06 index 7
-
 import Foundation
 import Combine
 
@@ -33,7 +31,5 @@ class CoinDataService {
                 self?.allCoins = returnedCoins
                 self?.coinSubscription?.cancel()
             })
-       
     }
-    
 }
