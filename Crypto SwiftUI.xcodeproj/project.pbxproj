@@ -46,6 +46,7 @@
 		2235E0EA29A93BD50067A062 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235E0E929A93BD50067A062 /* ChartView.swift */; };
 		2235E0EC29A944250067A062 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235E0EB29A944250067A062 /* Date.swift */; };
 		2235E0EE29A94E000067A062 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235E0ED29A94E000067A062 /* String.swift */; };
+		2235E0F229ABD5270067A062 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2235E0F129ABD5270067A062 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		2235E0E929A93BD50067A062 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		2235E0EB29A944250067A062 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		2235E0ED29A94E000067A062 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		2235E0F129ABD5270067A062 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				2235E0B429A557060067A062 /* Services */,
 				2235E0A929A51EB40067A062 /* Models */,
 				2235E09D29A4F5FF0067A062 /* Core */,
+				2235E0EF29ABD4F90067A062 /* Settings */,
 				2235E08E29A4F0A00067A062 /* Assets.xcassets */,
 				2235E09029A4F0A00067A062 /* Preview Content */,
 			);
@@ -284,6 +287,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2235E0EF29ABD4F90067A062 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2235E0F029ABD50D0067A062 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2235E0F029ABD50D0067A062 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2235E0F129ABD5270067A062 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -391,6 +410,7 @@
 				2235E0E829A8DB760067A062 /* CoinDetailDataService.swift in Sources */,
 				2235E0E629A8DB2F0067A062 /* DetailViewModel.swift in Sources */,
 				2235E0DB29A7EF5C0067A062 /* PortfolioDataService.swift in Sources */,
+				2235E0F229ABD5270067A062 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
