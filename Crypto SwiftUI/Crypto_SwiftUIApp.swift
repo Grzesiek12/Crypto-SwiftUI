@@ -27,6 +27,7 @@ struct Crypto_SwiftUIApp: App {
                     HomeView()
                         .navigationBarHidden(true)
                 }
+                .navigationViewStyle(StackNavigationViewStyle()) // poprawa dla iPada
                 .environmentObject(vm)
                 
                 ZStack {
