@@ -45,9 +45,6 @@ class PortfolioDataService {
            
     }
     
-    
-    
-    
     //MARK: - Private section
     
     private func getPortfolio() {
@@ -58,7 +55,6 @@ class PortfolioDataService {
         } catch let error {
             print("Error fetching portfolio entities: \(error)")
         }
-        
     }
     
     private func add(coin: CoinModel, amount: Double) {

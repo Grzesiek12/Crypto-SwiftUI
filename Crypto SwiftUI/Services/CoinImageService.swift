@@ -23,7 +23,6 @@ class CoinImageService {
         self.coin = coin
         self.imageName = coin.id
         getCoinImage()
-       
     }
     
     private func getCoinImage() {
@@ -34,9 +33,7 @@ class CoinImageService {
             downloadCoinImage()
           //  print("Downloading Image now")
         }
-        
     }
-    
     
     private func downloadCoinImage() {
        
@@ -55,5 +52,4 @@ class CoinImageService {
                 self.fileManager.saveImage(image: downloadedImage, imageName: self.imageName, folderName: self.folderName)
             })
     }
-    
 }

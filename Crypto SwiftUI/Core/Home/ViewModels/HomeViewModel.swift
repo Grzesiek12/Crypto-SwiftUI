@@ -46,9 +46,7 @@ class HomeViewModel: ObservableObject {
         $allCoins
             .combineLatest(portfolioDataService.$savedEntities)
             .map(mapAllCoinsToPortfolioCoins)
-        
             .sink { [weak self] (returnedCoins) in
-                
                 guard let self = self else { return }
                 self.portfolioCoins = self.sortPortfolioCoinsIfNeeded(coins: returnedCoins)
             }
@@ -119,10 +117,7 @@ class HomeViewModel: ObservableObject {
              coins.sort(by: { $0.currentPrice > $1.currentPrice })
         case .priceReversed:
              coins.sort(by: { $0.currentPrice < $1.currentPrice })
-      
-            
         }
-        
     }
     
     private func sortPortfolioCoinsIfNeeded(coins: [CoinModel]) -> [CoinModel] {

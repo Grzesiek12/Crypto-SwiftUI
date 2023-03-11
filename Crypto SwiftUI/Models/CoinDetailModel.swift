@@ -116,7 +116,6 @@ import Foundation
  }
  */
 
-
 struct CoinDetailModel: Codable {
     let id, symbol, name: String?
     let blockTimeInMinutes: Int?
@@ -144,7 +143,6 @@ struct Links:Codable {
         case subredditURL = "subreddit_url"
         
     }
-    
 }
 
 struct Description: Codable {

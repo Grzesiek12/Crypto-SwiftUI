@@ -124,7 +124,6 @@ extension ChartView {
             Spacer()
             Divider()
         }
-        
     }
     
     private var chartYAxis: some View {
@@ -136,7 +135,6 @@ extension ChartView {
             Spacer()
             Text(minY.formattedWithAbbreviations())
         }
-        
     }
     
     private var chartDateLabel: some View {

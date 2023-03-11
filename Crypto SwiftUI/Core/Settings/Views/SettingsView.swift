@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     let defaultURL = URL(string: "https://www.google.com")!
-    let youtubeURL = URL(string: "https://www.youtube.com")!
+    let linkedinURL = URL(string: "https://www.linkedin.com/in/grzegorz-wiczkowski-002848204/")!
     let coingeckoURL = URL(string: "https://www.coingecko.com")!
     let githubURL = URL(string: "https://github.com/Grzesiek12")!
     
@@ -67,7 +67,7 @@ extension SettingsView {
                     .foregroundColor(Color.theme.accent)
             }
             .padding()
-            Link("YT", destination: youtubeURL)
+            Link("LinkedIn", destination: linkedinURL)
            
         }
     }
